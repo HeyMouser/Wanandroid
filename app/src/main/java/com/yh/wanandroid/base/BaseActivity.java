@@ -29,12 +29,15 @@ public abstract class BaseActivity extends AppCompatActivity implements NetWorkB
         mActivity = this;
         netEvent = this;
         initView();
+        initToolBar();
         initData();
     }
 
     protected abstract int setLayoutId();
 
     protected abstract void initView();
+
+    protected abstract void initToolBar();
 
     protected abstract void initData();
 

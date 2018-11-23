@@ -25,7 +25,7 @@ public class DashboardFragment extends BaseFragment{
     }
 
     @Override
-    public int initData() {
-        return 0;
+    public void initData() {
+
     }
 }

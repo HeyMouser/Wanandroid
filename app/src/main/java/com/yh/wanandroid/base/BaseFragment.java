@@ -63,7 +63,7 @@ public abstract class BaseFragment extends Fragment implements BaseView, NetWork
 
     public abstract int getLayoutResID();
 
-    public abstract int initData();
+    public abstract void initData();
 
     protected void initView() {
         if (getView() == null)

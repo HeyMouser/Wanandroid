@@ -5,12 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.HomeFragment">
 
-    <LinearLayout
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/normal_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-    </LinearLayout>
+        <com.scwang.smartrefresh.header.DeliveryHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey" />
+
+        <com.scwang.smartrefresh.header.TaurusHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </FrameLayout>

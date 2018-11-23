@@ -32,6 +32,11 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
+    protected void initToolBar() {
+
+    }
+
+    @Override
     protected void initData() {
         Observable.timer(1500, TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.io())

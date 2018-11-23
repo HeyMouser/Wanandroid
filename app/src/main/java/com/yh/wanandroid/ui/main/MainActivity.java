@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.yh.wanandroid.R;
@@ -22,6 +23,8 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
+    @BindView(R.id.toolbar_common)
+    Toolbar toolbarCommon;
     @BindView(R.id.navigationView)
     BottomNavigationView navigationView;
 
@@ -62,6 +65,12 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initView() {
         navigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+    }
+
+    @Override
+    protected void initToolBar() {
+        setSupportActionBar(toolbarCommon);
+        getSupportActionBar().setTitle("玩安卓");
     }
 
     @Override
